@@ -19,6 +19,9 @@ public class Direccion {
     @DescriptionsList
     private Departamento departamento;
     @ManyToOne(fetch = FetchType.LAZY)
-    @DescriptionsList
+    @DescriptionsList(
+            depends = "this.departamento",
+            condition = "${departamento.id} = ?"
+    )
     private Municipio municipio;
 }

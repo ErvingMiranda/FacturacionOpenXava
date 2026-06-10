@@ -14,8 +14,8 @@ import java.util.Collection;
 public class Cliente extends org.openxava.model.Identifiable{
     private String nombre;
     private String apellido;
+    private String telefono;
     @ElementCollection
     @ListProperties("direccion, indicaciones, departamento.nombre, municipio.nombre")
     private Collection<Direccion> direcciones;
-    private String telefono;
 }
