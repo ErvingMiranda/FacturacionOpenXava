@@ -1,11 +1,17 @@
 package org.Ezone.POO.Facturacion.model;
 
-@lombok.Getter
-@lombok.Setter@javax.persistence.Entity
-@javax.persistence.Table
-public class Municipio {
+import lombok.Getter;
+import lombok.Setter;
+import org.openxava.model.Identifiable;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-
-
+@Getter
+@Setter
+@Entity
+@Table
+public class Municipio extends Identifiable {
+    private String nombre;
+    private String descripcion;
 }
